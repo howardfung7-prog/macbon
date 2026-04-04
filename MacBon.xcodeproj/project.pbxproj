@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		141070667323D7D8C622BDEA /* ActionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26350F74545B5788F2C87D11 /* ActionManager.swift */; };
+		18F3F2842F80AC370015B310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F3F2832F80AC370015B310 /* Assets.xcassets */; };
+		31641B2F2A632338F75194B3 /* TapDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A3E81AFC9895422A9A223 /* TapDetector.swift */; };
+		3EFA70F8130CE6B438DB43AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA8725A87A9C39202AB6799 /* AppDelegate.swift */; };
+		88B9E88C94B9506B4BCFBD49 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE798CDCFD5E16262377EB3D /* ActionType.swift */; };
+		8FD3845894132F2C0D695B53 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C14D1A34A6F72A7D22B26F /* SettingsView.swift */; };
+		AA11223344556677AABB0001 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA11223344556677AABB0010 /* Localizable.strings */; };
+		B6222C84DE473DE5E31C3563 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DDB913C8EA0236BC504E3 /* main.swift */; };
+		B70A34F9A934C80EAD423BAA /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34362BFD1779D157587EE4 /* AppSettings.swift */; };
+		CABAE8BAED676295723AB3A4 /* AccelerometerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F96D59730F085B3F2FF2E5 /* AccelerometerReader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14C14D1A34A6F72A7D22B26F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		18F3F2832F80AC370015B310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		231F6998EC4A197A55C75673 /* MacBon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacBon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26350F74545B5788F2C87D11 /* ActionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionManager.swift; sourceTree = "<group>"; };
+		70F96D59730F085B3F2FF2E5 /* AccelerometerReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerReader.swift; sourceTree = "<group>"; };
+		7C34362BFD1779D157587EE4 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		9DBE60597C60F8BE53BDA830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A81DDB913C8EA0236BC504E3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AA11223344556677AABB0011 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AA11223344556677AABB0012 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		AA11223344556677AABB0013 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AA11223344556677AABB0014 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AA11223344556677AABB0015 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AA11223344556677AABB0016 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		AE798CDCFD5E16262377EB3D /* ActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
+		F41A3E81AFC9895422A9A223 /* TapDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapDetector.swift; sourceTree = "<group>"; };
+		FCA8725A87A9C39202AB6799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		6DFD9EEA77F1C5F6B12EE2DC /* TapMac */ = {
+			isa = PBXGroup;
+			children = (
+				9DBE60597C60F8BE53BDA830 /* Info.plist */,
+				B148952C4DA126CD1BB35D3A /* Actions */,
+				F02AF6B53B852A021EFF3C31 /* App */,
+				810B89BB7E01A7C02C0BC6BC /* Core */,
+				9DC6186A162CCC3E4955E933 /* Models */,
+				AA11223344556677AABB0020 /* Resources */,
+				7DB012C2B8E50AC25A17134E /* Views */,
+			);
+			path = TapMac;
+			sourceTree = "<group>";
+		};
+		7DB012C2B8E50AC25A17134E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14C14D1A34A6F72A7D22B26F /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		810B89BB7E01A7C02C0BC6BC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				70F96D59730F085B3F2FF2E5 /* AccelerometerReader.swift */,
+				F41A3E81AFC9895422A9A223 /* TapDetector.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9DC6186A162CCC3E4955E933 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7C34362BFD1779D157587EE4 /* AppSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA11223344556677AABB0020 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18F3F2832F80AC370015B310 /* Assets.xcassets */,
+				AA11223344556677AABB0010 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B148952C4DA126CD1BB35D3A /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				26350F74545B5788F2C87D11 /* ActionManager.swift */,
+				AE798CDCFD5E16262377EB3D /* ActionType.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		E34D496E9C7C0316FAAA298C = {
+			isa = PBXGroup;
+			children = (
+				6DFD9EEA77F1C5F6B12EE2DC /* TapMac */,
+				EF0133847528939762533CD9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF0133847528939762533CD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				231F6998EC4A197A55C75673 /* MacBon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F02AF6B53B852A021EFF3C31 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FCA8725A87A9C39202AB6799 /* AppDelegate.swift */,
+				A81DDB913C8EA0236BC504E3 /* main.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DE9F81078CCAA1766D621F7 /* MacBon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 975AB7A9AA0E8AC9B203B491 /* Build configuration list for PBXNativeTarget "MacBon" */;
+			buildPhases = (
+				6AB211CBAC3D3E10AD905F98 /* Sources */,
+				AA11223344556677AABB0030 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacBon;
+			packageProductDependencies = (
+			);
+			productName = MacBon;
+			productReference = 231F6998EC4A197A55C75673 /* MacBon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		12E0E8190755540A2B5CBD3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					4DE9F81078CCAA1766D621F7 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 35808A41C1A88D1405716B52 /* Build configuration list for PBXProject "MacBon" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				"zh-Hans",
+				ja,
+				de,
+				fr,
+				"zh-Hant",
+			);
+			mainGroup = E34D496E9C7C0316FAAA298C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EF0133847528939762533CD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DE9F81078CCAA1766D621F7 /* MacBon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA11223344556677AABB0030 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F3F2842F80AC370015B310 /* Assets.xcassets in Resources */,
+				AA11223344556677AABB0001 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AB211CBAC3D3E10AD905F98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABAE8BAED676295723AB3A4 /* AccelerometerReader.swift in Sources */,
+				141070667323D7D8C622BDEA /* ActionManager.swift in Sources */,
+				88B9E88C94B9506B4BCFBD49 /* ActionType.swift in Sources */,
+				3EFA70F8130CE6B438DB43AE /* AppDelegate.swift in Sources */,
+				B70A34F9A934C80EAD423BAA /* AppSettings.swift in Sources */,
+				8FD3845894132F2C0D695B53 /* SettingsView.swift in Sources */,
+				31641B2F2A632338F75194B3 /* TapDetector.swift in Sources */,
+				B6222C84DE473DE5E31C3563 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AA11223344556677AABB0010 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA11223344556677AABB0011 /* en */,
+				AA11223344556677AABB0012 /* zh-Hans */,
+				AA11223344556677AABB0013 /* ja */,
+				AA11223344556677AABB0014 /* de */,
+				AA11223344556677AABB0015 /* fr */,
+				AA11223344556677AABB0016 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06DB74DD52233CDDFC4C393E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = TapMac/TapMac.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Yupeng Feng (R469U39H5C)";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = R469U39H5C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TapMac/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = MacBon;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0B6593581163E3242E5CEB2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TapMac/TapMac.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Yupeng Feng (R469U39H5C)";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = R469U39H5C;
+				INFOPLIST_FILE = TapMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macbon.MacBon;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4A18954CD7C296B5D4AE6FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = TapMac/TapMac.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Yupeng Feng (R469U39H5C)";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = R469U39H5C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TapMac/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = MacBon;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6E61A8FDED1574B2B4CCAB1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TapMac/TapMac.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Yupeng Feng (R469U39H5C)";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = R469U39H5C;
+				INFOPLIST_FILE = TapMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macbon.MacBon;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35808A41C1A88D1405716B52 /* Build configuration list for PBXProject "MacBon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06DB74DD52233CDDFC4C393E /* Debug */,
+				4A18954CD7C296B5D4AE6FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		975AB7A9AA0E8AC9B203B491 /* Build configuration list for PBXNativeTarget "MacBon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E61A8FDED1574B2B4CCAB1E /* Debug */,
+				0B6593581163E3242E5CEB2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 12E0E8190755540A2B5CBD3F /* Project object */;
+}

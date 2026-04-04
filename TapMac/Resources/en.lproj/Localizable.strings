@@ -1,0 +1,85 @@
+/* English — MacBon Localization */
+
+// MARK: - Tabs
+"tab.general" = "General";
+"tab.actions" = "Actions";
+"tab.audio" = "Audio";
+"tab.about" = "About";
+
+// MARK: - Menu Bar
+"menu.tap1" = "1 Tap";
+"menu.tap2" = "2 Taps";
+"menu.tap3" = "3 Taps";
+"menu.totalTaps" = "Total Taps: %d";
+"menu.settings" = "Settings...";
+"menu.quit" = "Quit MacBon";
+
+// MARK: - General Settings
+"sensitivity.title" = "Tap Sensitivity";
+"sensitivity.heavy" = "Threshold %.2fg — Requires firm tap";
+"sensitivity.medium" = "Threshold %.2fg — Moderate force";
+"sensitivity.light" = "Threshold %.2fg — Light tap triggers";
+"tapGap.title" = "Confirmation Delay";
+"tapGap.desc" = "Wait time after last tap to confirm tap count. Shorter = faster response, longer = fewer false triggers.";
+"cooldown.title" = "Cooldown";
+"cooldown.desc" = "Minimum interval before responding to new taps after triggering an action.";
+"showTapCount" = "Show tap count in menu bar";
+"launchAtLogin" = "Launch at login";
+
+// MARK: - Action Bindings
+"actions.hint" = "Bind an action to each tap pattern";
+"actions.reset" = "Reset to Defaults";
+"tap.single" = "1 Tap";
+"tap.double" = "2 Taps";
+"tap.triple" = "3 Taps";
+
+// MARK: - Action Categories
+"category.efficiency" = "Productivity";
+"category.emotion" = "Fun";
+
+// MARK: - Action Names
+"action.lockScreen.name" = "Lock Screen";
+"action.muteToggle.name" = "Mute Toggle";
+"action.customAudio.name" = "Custom Audio";
+"action.randomEncourage.name" = "Random Cheer";
+"action.customVoiceClock.name" = "Voice Clock";
+
+// MARK: - Action Descriptions
+"action.lockScreen.desc" = "Lock screen immediately for privacy";
+"action.muteToggle.desc" = "Toggle system mute";
+"action.customAudio.desc" = "Play a custom audio file";
+"action.randomEncourage.desc" = "Play a random motivational message";
+"action.customVoiceClock.desc" = "Announce time with custom voice chime";
+
+// MARK: - Audio Settings
+"audio.volume" = "Volume";
+"audio.dynamic" = "Dynamic volume — louder taps play louder";
+"audio.customFiles" = "Custom Audio Files";
+"audio.openFolder" = "Open Folder";
+"audio.empty" = "No audio files";
+"audio.formats" = "Supports .mp3 / .m4a / .wav / .aiff";
+"audio.add" = "Add Audio Files...";
+
+// MARK: - Action Messages
+"msg.screen.locked" = "Screen locked";
+"msg.audio.notFound" = "No audio found. Place files in ~/MacBon/Sounds/";
+"msg.audio.playing" = "Playing: %@";
+"msg.audio.failed" = "Audio playback failed";
+"msg.action.success" = "%@ done";
+"msg.action.failed" = "%@ failed";
+"msg.voiceClock" = "Voice clock: %@";
+
+// MARK: - Encouragements (semicolon-separated)
+"encouragements" = "You got this!;Keep going!;Nice work!;Stay focused!;You're awesome!;Don't give up!;Well done!;Keep it up!;You're on fire!;Almost there!";
+
+// MARK: - About
+"about.subtitle" = "Tap Your Mac";
+"about.slogan" = "Tap your Mac and make it work for you";
+"about.totalTaps" = "Total Taps";
+
+
+// MARK: - Quick Memo
+"action.quickMemo.name" = "Quick Memo";
+"action.quickMemo.desc" = "Pop up a text note. Type and press Return to save.";
+"msg.memo.failed" = "Failed to save memo";
+

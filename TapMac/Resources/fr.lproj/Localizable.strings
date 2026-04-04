@@ -1,0 +1,85 @@
+/* Français — Localisation MacBon */
+
+// MARK: - Onglets
+"tab.general" = "Général";
+"tab.actions" = "Actions";
+"tab.audio" = "Audio";
+"tab.about" = "À propos";
+
+// MARK: - Barre des menus
+"menu.tap1" = "1 tape";
+"menu.tap2" = "2 tapes";
+"menu.tap3" = "3 tapes";
+"menu.totalTaps" = "Total des tapes : %d";
+"menu.settings" = "Réglages…";
+"menu.quit" = "Quitter MacBon";
+
+// MARK: - Réglages généraux
+"sensitivity.title" = "Sensibilité des tapes";
+"sensitivity.heavy" = "Seuil %.2fg — Tape ferme requise";
+"sensitivity.medium" = "Seuil %.2fg — Force modérée";
+"sensitivity.light" = "Seuil %.2fg — Tape légère suffit";
+"tapGap.title" = "Délai de confirmation";
+"tapGap.desc" = "Temps d'attente après la dernière tape pour confirmer. Plus court = réponse plus rapide, plus long = moins de faux déclenchements.";
+"cooldown.title" = "Temps de recharge";
+"cooldown.desc" = "Intervalle minimum avant de répondre à de nouvelles tapes après déclenchement.";
+"showTapCount" = "Afficher le compteur dans la barre des menus";
+"launchAtLogin" = "Lancer au démarrage";
+
+// MARK: - Affectation des actions
+"actions.hint" = "Associer une action à chaque modèle de tape";
+"actions.reset" = "Rétablir les réglages par défaut";
+"tap.single" = "1 tape";
+"tap.double" = "2 tapes";
+"tap.triple" = "3 tapes";
+
+// MARK: - Catégories
+"category.efficiency" = "Productivité";
+"category.emotion" = "Détente";
+
+// MARK: - Noms des actions
+"action.lockScreen.name" = "Verrouiller";
+"action.muteToggle.name" = "Couper le son";
+"action.customAudio.name" = "Audio personnalisé";
+"action.randomEncourage.name" = "Encouragement";
+"action.customVoiceClock.name" = "Horloge vocale";
+
+// MARK: - Descriptions des actions
+"action.lockScreen.desc" = "Verrouiller l'écran pour protéger votre vie privée";
+"action.muteToggle.desc" = "Activer/désactiver le mode muet du système";
+"action.customAudio.desc" = "Lire un fichier audio personnalisé";
+"action.randomEncourage.desc" = "Lire un message d'encouragement aléatoire";
+"action.customVoiceClock.desc" = "Annoncer l'heure avec un carillon vocal personnalisé";
+
+// MARK: - Réglages audio
+"audio.volume" = "Volume";
+"audio.dynamic" = "Volume dynamique — plus on tape fort, plus c'est fort";
+"audio.customFiles" = "Fichiers audio personnalisés";
+"audio.openFolder" = "Ouvrir le dossier";
+"audio.empty" = "Aucun fichier audio";
+"audio.formats" = "Formats : .mp3 / .m4a / .wav / .aiff";
+"audio.add" = "Ajouter des fichiers audio…";
+
+// MARK: - Messages d'action
+"msg.screen.locked" = "Écran verrouillé";
+"msg.audio.notFound" = "Aucun fichier audio trouvé. Placez vos fichiers dans ~/MacBon/Sounds/";
+"msg.audio.playing" = "Lecture : %@";
+"msg.audio.failed" = "Échec de la lecture audio";
+"msg.action.success" = "%@ effectué";
+"msg.action.failed" = "%@ échoué";
+"msg.voiceClock" = "Horloge vocale : %@";
+
+// MARK: - Encouragements (séparés par des points-virgules)
+"encouragements" = "Tu peux le faire !;Continue !;Bien joué !;Reste concentré !;Tu es génial !;N'abandonne pas !;Bravo !;Tiens bon !;Tu assures !;Presque là !";
+
+// MARK: - À propos
+"about.subtitle" = "Tapez votre Mac";
+"about.slogan" = "Tapez sur votre Mac et laissez-le travailler pour vous";
+"about.totalTaps" = "Total des tapes";
+
+
+// MARK: - Mémo rapide
+"action.quickMemo.name" = "Mémo rapide";
+"action.quickMemo.desc" = "Saisissez une note et appuyez sur Retour pour sauvegarder.";
+"msg.memo.failed" = "Échec de la sauvegarde du mémo";
+

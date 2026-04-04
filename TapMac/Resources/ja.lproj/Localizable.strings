@@ -1,0 +1,85 @@
+/* 日本語 — MacBon ローカライズ */
+
+// MARK: - タブ
+"tab.general" = "一般";
+"tab.actions" = "アクション";
+"tab.audio" = "オーディオ";
+"tab.about" = "MacBonについて";
+
+// MARK: - メニューバー
+"menu.tap1" = "1回タップ";
+"menu.tap2" = "2回タップ";
+"menu.tap3" = "3回タップ";
+"menu.totalTaps" = "合計タップ数: %d";
+"menu.settings" = "設定...";
+"menu.quit" = "MacBonを終了";
+
+// MARK: - 一般設定
+"sensitivity.title" = "タップ感度";
+"sensitivity.heavy" = "しきい値 %.2fg — 強くタップが必要";
+"sensitivity.medium" = "しきい値 %.2fg — 中程度の力";
+"sensitivity.light" = "しきい値 %.2fg — 軽いタップで反応";
+"tapGap.title" = "確認待ち時間";
+"tapGap.desc" = "最後のタップ後、タップ回数を確定するまでの待機時間。短いほど反応が速く、長いほど誤判定が減ります。";
+"cooldown.title" = "クールダウン";
+"cooldown.desc" = "アクション実行後、次のタップに反応するまでの最小間隔。";
+"showTapCount" = "メニューバーにタップ数を表示";
+"launchAtLogin" = "ログイン時に起動";
+
+// MARK: - アクション設定
+"actions.hint" = "各タップパターンにアクションを割り当て";
+"actions.reset" = "デフォルトに戻す";
+"tap.single" = "1回タップ";
+"tap.double" = "2回タップ";
+"tap.triple" = "3回タップ";
+
+// MARK: - カテゴリ
+"category.efficiency" = "効率化";
+"category.emotion" = "エモーション";
+
+// MARK: - アクション名
+"action.lockScreen.name" = "画面ロック";
+"action.muteToggle.name" = "ミュート切替";
+"action.customAudio.name" = "カスタムオーディオ";
+"action.randomEncourage.name" = "ランダム応援";
+"action.customVoiceClock.name" = "音声時計";
+
+// MARK: - アクション説明
+"action.lockScreen.desc" = "プライバシー保護のため画面を即座にロック";
+"action.muteToggle.desc" = "システムミュートの切り替え";
+"action.customAudio.desc" = "カスタムオーディオファイルを再生";
+"action.randomEncourage.desc" = "ランダムな応援メッセージを再生";
+"action.customVoiceClock.desc" = "カスタム音声チャイムで時刻をお知らせ";
+
+// MARK: - オーディオ設定
+"audio.volume" = "音量";
+"audio.dynamic" = "ダイナミック音量 — 強くタップするほど音が大きくなる";
+"audio.customFiles" = "カスタムオーディオファイル";
+"audio.openFolder" = "フォルダを開く";
+"audio.empty" = "オーディオファイルがありません";
+"audio.formats" = ".mp3 / .m4a / .wav / .aiff に対応";
+"audio.add" = "オーディオファイルを追加...";
+
+// MARK: - アクションメッセージ
+"msg.screen.locked" = "画面をロックしました";
+"msg.audio.notFound" = "オーディオファイルが見つかりません。~/MacBon/Sounds/ に配置してください";
+"msg.audio.playing" = "再生中: %@";
+"msg.audio.failed" = "オーディオの再生に失敗しました";
+"msg.action.success" = "%@を実行しました";
+"msg.action.failed" = "%@に失敗しました";
+"msg.voiceClock" = "音声時計：%@";
+
+// MARK: - 応援メッセージ（セミコロン区切り）
+"encouragements" = "頑張って！;できるよ！;いいね！;集中して！;すごい！;諦めないで！;よくやった！;続けて！;最高！;もうすぐだ！";
+
+// MARK: - MacBonについて
+"about.subtitle" = "Macをタップ";
+"about.slogan" = "Macをタップして、あなたの代わりに働かせよう";
+"about.totalTaps" = "合計タップ数";
+
+
+// MARK: - クイックメモ
+"action.quickMemo.name" = "クイックメモ";
+"action.quickMemo.desc" = "テキストメモを入力してReturnで保存。";
+"msg.memo.failed" = "メモの保存に失敗しました";
+

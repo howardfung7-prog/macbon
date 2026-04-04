@@ -1,0 +1,85 @@
+/* 繁體中文 — MacBon 本地化 */
+
+// MARK: - 標籤頁
+"tab.general" = "一般";
+"tab.actions" = "動作";
+"tab.audio" = "音訊";
+"tab.about" = "關於";
+
+// MARK: - 選單列
+"menu.tap1" = "拍 1 下";
+"menu.tap2" = "拍 2 下";
+"menu.tap3" = "拍 3 下";
+"menu.totalTaps" = "總拍擊次數: %d";
+"menu.settings" = "設定...";
+"menu.quit" = "結束 MacBon";
+
+// MARK: - 一般設定
+"sensitivity.title" = "拍擊靈敏度";
+"sensitivity.heavy" = "閾值 %.2fg — 需要用力拍擊";
+"sensitivity.medium" = "閾值 %.2fg — 適中力度";
+"sensitivity.light" = "閾值 %.2fg — 輕拍即觸發";
+"tapGap.title" = "確認等待";
+"tapGap.desc" = "最後一拍後等待多久確認拍擊結束，越短回應越快，越長越不容易誤判";
+"cooldown.title" = "冷卻時間";
+"cooldown.desc" = "觸發動作後多久才能再次回應拍擊，防止誤觸";
+"showTapCount" = "選單列顯示拍擊計數";
+"launchAtLogin" = "開機自動啟動";
+
+// MARK: - 動作綁定
+"actions.hint" = "為每種拍擊模式綁定一個動作";
+"actions.reset" = "恢復預設設定";
+"tap.single" = "拍 1 下";
+"tap.double" = "拍 2 下";
+"tap.triple" = "拍 3 下";
+
+// MARK: - 動作分類
+"category.efficiency" = "效率";
+"category.emotion" = "情感";
+
+// MARK: - 動作名稱
+"action.lockScreen.name" = "鎖定螢幕";
+"action.muteToggle.name" = "靜音切換";
+"action.customAudio.name" = "自訂音訊";
+"action.randomEncourage.name" = "隨機鼓勵";
+"action.customVoiceClock.name" = "語音報時";
+
+// MARK: - 動作描述
+"action.lockScreen.desc" = "立即鎖定螢幕以保護隱私";
+"action.muteToggle.desc" = "切換系統靜音狀態";
+"action.customAudio.desc" = "播放使用者自訂的音訊檔案";
+"action.randomEncourage.desc" = "隨機播放一段鼓勵或激勵語音";
+"action.customVoiceClock.desc" = "使用自訂語音檔案進行整點報時";
+
+// MARK: - 音訊設定
+"audio.volume" = "音量控制";
+"audio.dynamic" = "動態音量 — 拍擊力度越大音量越高";
+"audio.customFiles" = "自訂音訊檔案";
+"audio.openFolder" = "開啟資料夾";
+"audio.empty" = "暫無音訊檔案";
+"audio.formats" = "支援 .mp3 / .m4a / .wav / .aiff";
+"audio.add" = "加入音訊檔案...";
+
+// MARK: - 動作訊息
+"msg.screen.locked" = "螢幕已鎖定";
+"msg.audio.notFound" = "未找到音訊檔案，請將音訊放入 ~/MacBon/Sounds/ 目錄";
+"msg.audio.playing" = "正在播放: %@";
+"msg.audio.failed" = "音訊播放失敗";
+"msg.action.success" = "%@已執行";
+"msg.action.failed" = "%@失敗";
+"msg.voiceClock" = "語音報時：%@";
+
+// MARK: - 鼓勵語句（分號分隔）
+"encouragements" = "加油！;你做到了！;繼續保持！;很棒！;你真厲害！;不要放棄！;做得好！;堅持下去！;你在發光！;快到了！";
+
+// MARK: - 關於
+"about.subtitle" = "妙控機身";
+"about.slogan" = "拍拍你的 Mac，讓它為你工作";
+"about.totalTaps" = "總拍擊次數";
+
+
+// MARK: - 快速備忘
+"action.quickMemo.name" = "快速備忘";
+"action.quickMemo.desc" = "彈出文字便箋，輸入後按 Return 儲存。";
+"msg.memo.failed" = "儲存備忘失敗";
+

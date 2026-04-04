@@ -1,0 +1,85 @@
+/* Deutsch — MacBon Lokalisierung */
+
+// MARK: - Tabs
+"tab.general" = "Allgemein";
+"tab.actions" = "Aktionen";
+"tab.audio" = "Audio";
+"tab.about" = "Über";
+
+// MARK: - Menüleiste
+"menu.tap1" = "1× Tippen";
+"menu.tap2" = "2× Tippen";
+"menu.tap3" = "3× Tippen";
+"menu.totalTaps" = "Tipps gesamt: %d";
+"menu.settings" = "Einstellungen …";
+"menu.quit" = "MacBon beenden";
+
+// MARK: - Allgemeine Einstellungen
+"sensitivity.title" = "Tipp-Empfindlichkeit";
+"sensitivity.heavy" = "Schwelle %.2fg — Kräftiges Tippen nötig";
+"sensitivity.medium" = "Schwelle %.2fg — Mittlere Kraft";
+"sensitivity.light" = "Schwelle %.2fg — Leichtes Tippen genügt";
+"tapGap.title" = "Bestätigungsverzögerung";
+"tapGap.desc" = "Wartezeit nach dem letzten Tipp zur Bestätigung. Kürzer = schnellere Reaktion, länger = weniger Fehlauslösungen.";
+"cooldown.title" = "Abklingzeit";
+"cooldown.desc" = "Mindestintervall vor dem Reagieren auf neue Tipps nach Auslösen einer Aktion.";
+"showTapCount" = "Tippanzahl in der Menüleiste anzeigen";
+"launchAtLogin" = "Bei Anmeldung starten";
+
+// MARK: - Aktionszuordnung
+"actions.hint" = "Jedes Tippmuster einer Aktion zuordnen";
+"actions.reset" = "Standardeinstellungen wiederherstellen";
+"tap.single" = "1× Tippen";
+"tap.double" = "2× Tippen";
+"tap.triple" = "3× Tippen";
+
+// MARK: - Kategorien
+"category.efficiency" = "Produktivität";
+"category.emotion" = "Spaß";
+
+// MARK: - Aktionsnamen
+"action.lockScreen.name" = "Bildschirm sperren";
+"action.muteToggle.name" = "Stumm schalten";
+"action.customAudio.name" = "Eigenes Audio";
+"action.randomEncourage.name" = "Motivation";
+"action.customVoiceClock.name" = "Sprachuhr";
+
+// MARK: - Aktionsbeschreibungen
+"action.lockScreen.desc" = "Bildschirm sofort zum Schutz der Privatsphäre sperren";
+"action.muteToggle.desc" = "Systemstummschaltung umschalten";
+"action.customAudio.desc" = "Eine eigene Audiodatei abspielen";
+"action.randomEncourage.desc" = "Zufällige Motivationsnachricht abspielen";
+"action.customVoiceClock.desc" = "Uhrzeit mit eigenem Sprachsignal ansagen";
+
+// MARK: - Audioeinstellungen
+"audio.volume" = "Lautstärke";
+"audio.dynamic" = "Dynamische Lautstärke — kräftigeres Tippen = lauter";
+"audio.customFiles" = "Eigene Audiodateien";
+"audio.openFolder" = "Ordner öffnen";
+"audio.empty" = "Keine Audiodateien";
+"audio.formats" = "Unterstützt .mp3 / .m4a / .wav / .aiff";
+"audio.add" = "Audiodateien hinzufügen …";
+
+// MARK: - Aktionsmeldungen
+"msg.screen.locked" = "Bildschirm gesperrt";
+"msg.audio.notFound" = "Keine Audiodatei gefunden. Bitte Dateien in ~/MacBon/Sounds/ ablegen";
+"msg.audio.playing" = "Wiedergabe: %@";
+"msg.audio.failed" = "Audio-Wiedergabe fehlgeschlagen";
+"msg.action.success" = "%@ ausgeführt";
+"msg.action.failed" = "%@ fehlgeschlagen";
+"msg.voiceClock" = "Sprachuhr: %@";
+
+// MARK: - Ermutigungen (semikolongetrennt)
+"encouragements" = "Du schaffst das!;Weiter so!;Gut gemacht!;Bleib fokussiert!;Du bist großartig!;Gib nicht auf!;Sehr gut!;Mach weiter!;Du brennst!;Fast geschafft!";
+
+// MARK: - Über
+"about.subtitle" = "Tipp auf deinen Mac";
+"about.slogan" = "Tippe auf deinen Mac und lass ihn für dich arbeiten";
+"about.totalTaps" = "Tipps gesamt";
+
+
+// MARK: - Schnellnotiz
+"action.quickMemo.name" = "Schnellnotiz";
+"action.quickMemo.desc" = "Notiz eingeben und mit Return speichern.";
+"msg.memo.failed" = "Notiz konnte nicht gespeichert werden";
+

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBon — Tap Your Mac</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="#" class="nav-logo">
+            <span class="nav-icon">
+                <span class="vibe-line left l1"></span>
+                <span class="vibe-line left l2"></span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                <span class="vibe-line right l1"></span>
+                <span class="vibe-line right l2"></span>
+            </span>
+            MacBon
+        </a>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#how">How It Works</a>
+            <a href="#install">Setup</a>
+            <a href="#download" class="btn btn-nav">Download</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-eyebrow">Apple Silicon MacBook</div>
+    <h1>
+        Interact with your<br>
+        <em>Mac's body.</em>
+    </h1>
+    <p class="hero-sub">
+        Tap the chassis to mute, lock the screen, or trigger a cheer. No keyboard shortcuts to memorize. Just tap.
+    </p>
+    <div class="hero-actions">
+        <a href="https://github.com/howardfung7-prog/macbon/releases/download/v1.1.0/MacBon.dmg" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Free
+        </a>
+        <a href="#how" class="btn btn-ghost btn-lg">How it works &darr;</a>
+    </div>
+
+    <!-- Animated MacBook Demo -->
+    <div class="hero-visual">
+        <div class="mac-demo">
+            <!-- MacBook -->
+            <div class="mac-body">
+                <!-- Screen -->
+                <div class="mac-screen">
+                    <div class="mac-screen-inner">
+                        <div class="mac-screen-bar">
+                            <span class="bar-dot red"></span>
+                            <span class="bar-dot yellow"></span>
+                            <span class="bar-dot green"></span>
+                            <span class="bar-title">MacBon</span>
+                        </div>
+                        <div class="mac-screen-content">
+                            <!-- Toast that syncs with tap actions -->
+                            <div class="mac-toast" id="macToast">
+                                <span class="mac-toast-icon" id="toastIcon">&#128263;</span>
+                                <span class="mac-toast-text" id="toastText">Muted</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Base / Keyboard area -->
+                <div class="mac-keyboard">
+                    <div class="keyboard-keys"></div>
+                </div>
+                <!-- Bottom with trackpad and tap zones -->
+                <div class="mac-bottom">
+                    <div class="tap-zone zone-left" id="tapZoneLeft">
+                        <div class="zone-ripple"></div>
+                        <div class="zone-ripple r2"></div>
+                    </div>
+                    <div class="mac-trackpad"></div>
+                    <div class="tap-zone zone-right" id="tapZoneRight">
+                        <div class="zone-ripple"></div>
+                        <div class="zone-ripple r2"></div>
+                    </div>
+                </div>
+                <!-- Bottom edge -->
+                <div class="mac-edge"></div>
+            </div>
+
+            <!-- Animated hand -->
+            <div class="demo-hand" id="demoHand">
+                <svg viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Palm -->
+                    <ellipse cx="30" cy="32" rx="18" ry="14" fill="#1d1d1f" opacity="0.12"/>
+                    <ellipse cx="30" cy="30" rx="16" ry="13" fill="#7c3aed" opacity="0.85"/>
+                    <!-- Fingers -->
+                    <rect x="14" y="10" width="7" height="22" rx="3.5" fill="#7c3aed" opacity="0.8"/>
+                    <rect x="22" y="5" width="7" height="27" rx="3.5" fill="#7c3aed" opacity="0.85"/>
+                    <rect x="31" y="5" width="7" height="27" rx="3.5" fill="#7c3aed" opacity="0.85"/>
+                    <rect x="39" y="10" width="7" height="22" rx="3.5" fill="#7c3aed" opacity="0.8"/>
+                    <!-- Wrist -->
+                    <rect x="20" y="40" width="20" height="36" rx="8" fill="#7c3aed" opacity="0.65"/>
+                </svg>
+            </div>
+
+            <!-- Action bubbles that pop up -->
+            <div class="action-bubble bubble-1" id="bubble1">
+                <span class="bubble-emoji">&#127925;</span>
+                <span class="bubble-label">Mute</span>
+            </div>
+            <div class="action-bubble bubble-2" id="bubble2">
+                <span class="bubble-emoji">&#128274;</span>
+                <span class="bubble-label">Lock Screen</span>
+            </div>
+            <div class="action-bubble bubble-3" id="bubble3">
+                <span class="bubble-emoji">&#128263;</span>
+                <span class="bubble-label">Mute</span>
+            </div>
+            <div class="action-bubble bubble-4" id="bubble4">
+                <span class="bubble-emoji">&#128274;</span>
+                <span class="bubble-label">Lock Screen</span>
+            </div>
+            <div class="action-bubble bubble-5" id="bubble5">
+                <span class="bubble-emoji">&#128170;</span>
+                <span class="bubble-label">You got this!</span>
+            </div>
+            <div class="action-bubble bubble-6" id="bubble6">
+                <span class="bubble-emoji">&#128263;</span>
+                <span class="bubble-label">Mute</span>
+            </div>
+            <div class="action-bubble bubble-7" id="bubble7">
+                <span class="bubble-emoji">&#128580;</span>
+                <span class="bubble-label">Focus On</span>
+            </div>
+            <div class="action-bubble bubble-8" id="bubble8">
+                <span class="bubble-emoji">&#129346;</span>
+                <span class="bubble-label">Duck!</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats -->
+<section class="proof">
+    <div class="container">
+        <div class="proof-grid">
+            <div class="proof-item">
+                <span class="proof-number" data-count="3">0</span>
+                <span class="proof-label">Tap Patterns</span>
+            </div>
+            <div class="proof-divider"></div>
+            <div class="proof-item">
+                <span class="proof-number" data-count="11">0</span>
+                <span class="proof-label">Built-in Actions</span>
+            </div>
+            <div class="proof-divider"></div>
+            <div class="proof-item">
+                <span class="proof-number" data-count="6">0</span>
+                <span class="proof-label">Languages</span>
+            </div>
+            <div class="proof-divider"></div>
+            <div class="proof-item">
+                <span class="proof-number">&lt;50ms</span>
+                <span class="proof-label">Response Time</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features" id="features">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-eyebrow">Features</div>
+            <h2>It's hiding a sensor.<br>We gave it a <span class="gradient-text">purpose</span>.</h2>
+            <p>Every Apple Silicon MacBook has a built-in accelerometer sitting idle. MacBon wakes it up and puts it to work.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card card-hero">
+                <div class="card-hero-text">
+                    <div class="feature-icon">&#127919;</div>
+                    <h3>5 actions. Your rules.</h3>
+                    <p>Bind any action to 1, 2, or 3 taps. Mute with a pat. Lock your screen as you walk away. No mouse. No clicks. Just tap.</p>
+                </div>
+                <div class="card-hero-visual">
+                    <div class="actions-showcase">
+                        <div class="action-pill"><span>&#128263;</span> Play/Pause</div>
+                        <div class="action-pill"><span>&#128274;</span> Lock Screen</div>
+                        <div class="action-pill"><span>&#128263;</span> Mute</div>
+                        <div class="action-pill"><span>&#128580;</span> Focus Mode</div>
+                        <div class="action-pill"><span>&#127925;</span> Custom Audio</div>
+                        <div class="action-pill"><span>&#128170;</span> Random Cheer</div>
+                        <div class="action-pill"><span>&#127908;</span> Voice Clock</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">&#129504;</div>
+                <h3>Won't mistake typing for tapping</h3>
+                <p>800Hz sampling with smart filtering. Pound that keyboard all you want — MacBon knows the difference.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">&#128373;&#65039;</div>
+                <h3>What happens on your Mac stays on your Mac</h3>
+                <p>Zero internet. Zero tracking. Zero microphone. Just a hardware sensor and some clever math. That's it.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">&#127760;</div>
+                <h3>Speaks your language</h3>
+                <p>English, Chinese (Simplified & Traditional), Japanese, German, French. Auto-detects from your system.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">&#128564;</div>
+                <h3>Knows when to shut up</h3>
+                <p>Screen off? Lid closed? Screensaver on? MacBon goes silent. No phantom taps at 3am.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">&#127926;</div>
+                <h3>Your sounds, your vibe</h3>
+                <p>Drop any MP3 into ~/MacBon/Sounds/ and tap to play it. A friend's laugh, a motivational quote, a duck quack. You do you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="how" id="how">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-eyebrow">How It Works</div>
+            <h2>Tap the body.<br>Not the keyboard. Not the trackpad.<br><span class="gradient-text">The actual chassis.</span></h2>
+        </div>
+
+        <div class="steps">
+            <div class="step" data-step="1">
+                <div class="step-visual">
+                    <div class="tap-demo">
+                        <div class="demo-mac"><div class="demo-screen"></div><div class="demo-base"></div></div>
+                        <div class="demo-hand hand-1"><div class="demo-ripple"></div></div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="step-number">01</div>
+                    <h3>One tap</h3>
+                    <p>A quick pat on the side. Like saying "hey buddy." Default action: <strong>Mute</strong> — silence everything with one tap.</p>
+                    <div class="step-tag">~50ms response</div>
+                </div>
+            </div>
+
+            <div class="step" data-step="2">
+                <div class="step-visual">
+                    <div class="tap-demo">
+                        <div class="demo-mac"><div class="demo-screen"></div><div class="demo-base"></div></div>
+                        <div class="demo-hand hand-2"><div class="demo-ripple"></div><div class="demo-ripple r2"></div></div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="step-number">02</div>
+                    <h3>Double tap</h3>
+                    <p>Two quick taps. The universal "I need this NOW" signal. Default: <strong>Lock Screen</strong> — walk away from your desk without touching the keyboard.</p>
+                    <div class="step-tag">Smart timing window</div>
+                </div>
+            </div>
+
+            <div class="step" data-step="3">
+                <div class="step-visual">
+                    <div class="tap-demo">
+                        <div class="demo-mac"><div class="demo-screen"></div><div class="demo-base"></div></div>
+                        <div class="demo-hand hand-3"><div class="demo-ripple"></div><div class="demo-ripple r2"></div><div class="demo-ripple r3"></div></div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="step-number">03</div>
+                    <h3>Triple tap</h3>
+                    <p>Three taps. Your wildcard. Default: <strong>Custom Audio</strong> — set it to play your hype song, your partner's voice, or that one sound effect that makes you smile.</p>
+                    <div class="step-tag">Your secret command</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Settings Preview -->
+<section class="preview">
+    <div class="container">
+        <div class="preview-layout">
+            <div class="preview-text">
+                <div class="section-eyebrow">Settings</div>
+                <h2>Dial in your <span class="gradient-text">perfect tap</span>.</h2>
+                <ul class="preview-list">
+                    <li>
+                        <span class="list-icon">&#9878;&#65039;</span>
+                        <div>
+                            <strong>Sensitivity</strong>
+                            <span>From butterfly-landing to desk-slap</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="list-icon">&#9201;</span>
+                        <div>
+                            <strong>Timing</strong>
+                            <span>Adjust how fast you tap and how long to wait</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="list-icon">&#127911;</span>
+                        <div>
+                            <strong>Custom audio</strong>
+                            <span>Drop MP3s, trigger them with taps</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="list-icon">&#128200;</span>
+                        <div>
+                            <strong>Tap counter</strong>
+                            <span>Because who doesn't love a good stat</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="preview-window">
+                <div class="window-chrome">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="window-title">MacBon Settings</span>
+                </div>
+                <div class="window-body">
+                    <div class="setting-row">
+                        <span class="setting-label">&#9995; Sensitivity</span>
+                        <div class="setting-slider">
+                            <span>&#128034;</span>
+                            <div class="slider-track"><div class="slider-fill" style="width:60%"><div class="slider-thumb"></div></div></div>
+                            <span>&#128007;</span>
+                        </div>
+                    </div>
+                    <div class="setting-divider"></div>
+                    <div class="setting-row">
+                        <span class="setting-label">1 Tap &rarr;</span>
+                        <div class="setting-select">&#128263; Mute</div>
+                    </div>
+                    <div class="setting-row">
+                        <span class="setting-label">2 Taps &rarr;</span>
+                        <div class="setting-select">&#128274; Lock Screen</div>
+                    </div>
+                    <div class="setting-row">
+                        <span class="setting-label">3 Taps &rarr;</span>
+                        <div class="setting-select">&#127925; Custom Audio</div>
+                    </div>
+                    <div class="setting-divider"></div>
+                    <div class="setting-row">
+                        <span class="setting-label">&#128266; Volume</span>
+                        <div class="setting-slider">
+                            <span>&#128264;</span>
+                            <div class="slider-track"><div class="slider-fill" style="width:80%"><div class="slider-thumb"></div></div></div>
+                            <span>&#128266;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Download -->
+<section class="download" id="download">
+    <div class="container">
+        <div class="download-card">
+            <h2>Your Mac is waiting<br>to be tapped.</h2>
+            <p>Free. No account. No internet needed. Just you and your MacBook.</p>
+            <div class="download-actions">
+                <a href="https://github.com/howardfung7-prog/macbon/releases/download/v1.1.0/MacBon.dmg" class="btn btn-dark btn-lg">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 21.99C7.78997 22.03 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+                    Download for macOS
+                </a>
+            </div>
+            <div class="download-meta">
+                <span>macOS 13 Ventura+</span>
+                <span>&middot;</span>
+                <span>Apple Silicon only</span>
+                <span>&middot;</span>
+                <span>~2MB</span>
+                <span>&middot;</span>
+                <span>No sign-up</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Install Guide -->
+<section class="install" id="install">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-eyebrow">Setup</div>
+            <h2>Ready in <span class="gradient-text">60 seconds</span>.</h2>
+            <p>Seriously. We timed it.</p>
+        </div>
+
+        <div class="install-steps">
+            <div class="install-step fade-up">
+                <div class="install-num">1</div>
+                <h4>Download & drag</h4>
+                <p>Unzip. Drag MacBon.app into Applications. That's the hard part. Done.</p>
+            </div>
+
+            <div class="install-step fade-up">
+                <div class="install-num">2</div>
+                <h4>Right-click to open</h4>
+                <p>First time? Right-click &rarr; Open. macOS will ask if you trust us. (You can.) Click Open.</p>
+                <div class="install-code">System Settings &rarr; Privacy &rarr; Input Monitoring &rarr; Allow MacBon</div>
+            </div>
+
+            <div class="install-step fade-up">
+                <div class="install-num">3</div>
+                <h4>Tap away</h4>
+                <p>MacBon lives in your menu bar. Tap your MacBook's body and watch the magic happen. Customize in settings.</p>
+            </div>
+        </div>
+
+        <div class="install-steps" style="margin-top: 16px;">
+            <div class="install-step fade-up">
+                <div class="install-num alt">?</div>
+                <h4>Not working?</h4>
+                <p>Make sure you're on Apple Silicon (M1/M2/M3/M4). Grant accessibility permissions if asked. Try bumping up sensitivity in settings.</p>
+            </div>
+
+            <div class="install-step fade-up">
+                <div class="install-num alt">&#9834;</div>
+                <h4>Custom sounds</h4>
+                <p>Want your Mac to quack when you tap it? Drop audio files here:</p>
+                <div class="install-code">~/MacBon/Sounds/</div>
+            </div>
+
+            <div class="install-step fade-up">
+                <div class="install-num alt">&#9432;</div>
+                <h4>Requirements</h4>
+                <p><strong>macOS 13+</strong> on any <strong>Apple Silicon MacBook</strong>. Desktop Macs don't have the sensor — sorry, Mac Mini.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="nav-icon small">
+                    <span class="vibe-line left l1"></span>
+                    <span class="vibe-line left l2"></span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                    <span class="vibe-line right l1"></span>
+                    <span class="vibe-line right l2"></span>
+                </span>
+                MacBon
+            </div>
+            <p class="footer-copy">Made with care for Mac people. Tap responsibly.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
