@@ -63,7 +63,14 @@ Tap the side of your MacBook — not the keyboard, not the trackpad, the actual 
 
 ## Installation
 
-### Download (Recommended)
+### Homebrew (Recommended)
+
+```bash
+brew tap howardfung7-prog/tap
+brew install --cask macbon
+```
+
+### Download DMG
 
 1. Download the latest `.dmg` from [Releases](https://github.com/howardfung7-prog/macbon/releases/latest)
 2. Drag `MacBon.app` into `/Applications`
