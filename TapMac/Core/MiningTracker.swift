@@ -152,12 +152,26 @@ class MiningTracker: ObservableObject {
     // MARK: - Device ID
 
     private static func resolveDeviceID(defaults: UserDefaults) -> String {
-        if let cached = defaults.string(forKey: Keys.deviceID) { return cached }
-        let hwUUID = readHardwareUUID() ?? UUID().uuidString
-        let clean  = hwUUID.replacingOccurrences(of: "-", with: "").uppercased()
-        let id     = "MAC-" + String(clean.prefix(8))
-        defaults.set(id, forKey: Keys.deviceID)
-        return id
+        // 安全：始终从硬件 UUID 计算当前 device_id
+        // 如果缓存的 id 与硬件不一致（说明 UserDefaults 被从别的 Mac 复制过来），
+        // 清空所有挖矿状态，强制以本机硬件身份重新开始 — 防止冒充
+        let hwUUID   = readHardwareUUID() ?? UUID().uuidString
+        let clean    = hwUUID.replacingOccurrences(of: "-", with: "").uppercased()
+        let computed = "MAC-" + String(clean.prefix(8))
+
+        if let cached = defaults.string(forKey: Keys.deviceID), cached != computed {
+            print("[Security] ⚠️ Cached device_id (\(cached)) ≠ this Mac (\(computed)). Wiping local state.")
+            let allKeys: [String] = [
+                Keys.deviceID, Keys.solAddress, Keys.tokenBalance,
+                Keys.activeDevices, Keys.airdropUnlocked, Keys.hasUsedModify,
+                Keys.lastSyncDay, Keys.dayKey, Keys.hourTaps,
+                Keys.uploadStatus, Keys.attested,
+            ]
+            for k in allKeys { defaults.removeObject(forKey: k) }
+        }
+
+        defaults.set(computed, forKey: Keys.deviceID)
+        return computed
     }
 
     private static func readHardwareUUID() -> String? {

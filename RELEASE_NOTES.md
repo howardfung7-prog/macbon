@@ -1,47 +1,32 @@
-# MacBon 1.2.0
+# MacBon 1.3.0
 
-## 🎉 BON Token Mining is now live
+## 🔒 Security patch
 
-The big update — every MacBook tap now earns you **BON** (formerly TAP), the work-focused token. Network state and your earnings sync in real time.
+This release tightens device identity to prevent UI-spoofing if a user copies their preferences plist to another Mac.
 
-## What's new
+### What changed
 
-### Mining
-- 🪙 **Token rename**: `TAP` → **`BON`**
-- 🌍 **Live network stats** in the Mining tab — Active Macs, BON Paid, Locked Reserve, Today's Pool — refresh every 30 s
-- 🔒 **Pre-Mining Reserve**: 50% of rewards locked until network reaches 50,000 Macs (unlocks retroactively to early miners)
-- 📅 **Daily 6-hour quota** with proper UTC handling
-- 🛡️ **Hardware-signed reports** via Secure Enclave (anti-curl / anti-replay)
+- **Hardware-bound device identity**: On every launch, the app re-reads the Mac's `IOPlatformUUID` and verifies it matches the cached `device_id`. If they don't match (e.g., preferences plist copied from another Mac), **all local state is wiped** and the device starts fresh. This prevents a stale UI from displaying another Mac's balance.
 
-### Setup & UX
-- Confirmation alert before binding Solana wallet — one-time, immutable
-- One free address modification before TGE (visible "修改" button)
-- Mining tab now scrollable; UI shifted to BON brand purple throughout
-- Improved character-level Solana address validation with specific error hints
+### Why this matters
 
-### Localization
-- All 6 languages (zh-Hans / zh-Hant / en / ja / de / fr) brought to 93 keys parity
-- English encouragement phrases added (previously silent)
-- Headline updated: **"6 hrs = Daily Work Goal in the AI Age"**
+In v1.2.0, if someone copied `~/Library/Preferences/tech.macbon.app.plist` from a friend's Mac, they would see the friend's BON balance in the app — even though no actual rewards or signing keys were transferred, the displayed number was misleading. v1.3.0 now detects this and resets cleanly.
 
-### Anti-cheat
-- Single-instance enforcement (running twice gets blocked)
-- Device ID strictly bound to hardware UUID
-- 10-device cap per Solana address
-- Tap count sanity limits
+### What it doesn't change
 
-## Hardware requirement
+- Server-side balances are unaffected (those have always been keyed by hardware device_id)
+- Secure Enclave / CryptoKit signing keys remain the strongest barrier
+- Solana address binding is still permanent per device
 
-**Apple Silicon MacBook only** — M1 / M2 / M3 / M4 / M5. Intel Macs and desktop Macs (Mac mini / Studio / Pro) lack the chassis accelerometer.
+---
 
 ## Install
 
 1. Download `MacBon.dmg`
 2. Open the DMG, drag MacBon to Applications
-3. Launch from Applications (first time: right-click → Open to bypass Gatekeeper warning)
-4. Grant accessibility permissions when asked
+3. Launch from Applications
 
-Want to mine? Switch to the **挖矿 / Mining** tab and bind your Solana wallet.
+Existing v1.2.0 users: balance and progress are preserved through the update (your hardware identity stays the same).
 
 ---
 
