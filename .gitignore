@@ -1,29 +1,17 @@
-# Xcode
+# Build outputs
+dist/
 build/
-DerivedData/
+*.xcarchive
+*.dmg
+*.zip
+
+# Xcode user state
+**/xcuserdata/
+**/*.xcworkspace/xcuserdata/
 *.xcuserstate
-*.xcuserdatad/
-xcuserdata/
-*.xcworkspace/xcshareddata/swiftpm/
-*.pbxuser
-*.mode1v3
-*.mode2v3
-*.perspectivev3
-*.hmap
-*.ipa
-*.dSYM.zip
-*.dSYM
+
+# Claude / agents
+.claude/
 
 # macOS
 .DS_Store
-.AppleDouble
-.LSOverride
-._*
-
-# Vercel
-.vercel/
-
-# Misc
-*.swp
-*.swo
-*~

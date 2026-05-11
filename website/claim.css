@@ -1,0 +1,515 @@
+/* ========================================
+   MacBon — Claim Page Styles
+   ======================================== */
+
+.claim-page { background: #0a0a0f; color: #f0f0f5; }
+
+/* Override nav for dark page */
+.claim-page .nav {
+    background: rgba(10,10,15,0.8);
+    border-bottom-color: rgba(255,255,255,0.08);
+}
+.claim-page .nav-logo,
+.claim-page .nav-links a { color: #f0f0f5; }
+.claim-page .nav-links a:hover { color: #fff; }
+.claim-page .btn-nav {
+    background: rgba(255,255,255,0.08);
+    color: #f0f0f5;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Glow background */
+.claim-glow {
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 600px;
+    background: radial-gradient(ellipse, rgba(124,58,237,0.25) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── Claim Hero ── */
+.claim-hero {
+    padding: 60px 0 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.claim-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.claim-token-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    color: #fff;
+    box-shadow: 0 0 40px rgba(124,58,237,0.5);
+}
+
+.claim-header h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.claim-sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.55);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ── Coming Soon Banner ── */
+.coming-soon-banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(251,191,36,0.08);
+    border: 1px solid rgba(251,191,36,0.25);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+}
+
+.cs-icon { font-size: 1.8rem; flex-shrink: 0; }
+
+.cs-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cs-text strong {
+    color: #fbbf24;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.cs-text span {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* ── Airdrop Progress ── */
+.airdrop-progress-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 28px 32px 24px;
+    margin-bottom: 40px;
+}
+
+/* Banner link */
+.coming-soon-banner a {
+    color: #fbbf24;
+    text-decoration: underline;
+    text-decoration-color: rgba(251,191,36,0.4);
+    text-underline-offset: 2px;
+}
+.coming-soon-banner a:hover { text-decoration-color: #fbbf24; }
+
+/* ── Three-milestone track ── */
+.ms-track {
+    position: relative;
+    height: 80px;
+    margin: 18px 0 8px;
+    padding: 0 4px;
+}
+
+.ms-track-bg {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 100px;
+}
+
+.ms-track-fill {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    height: 6px;
+    width: 0%;
+    background: linear-gradient(90deg, #fb923c, #a855f7, #4ade80);
+    border-radius: 100px;
+    transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: 0 0 12px rgba(168,85,247,0.5);
+    min-width: 0;
+}
+
+.ms-point {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.ms-point-10k { left: 20%; }
+.ms-point-50k { left: 100%; }
+
+.ms-point-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(20,20,28,0.9);
+    border: 2px solid rgba(255,255,255,0.2);
+    transition: all 0.3s;
+    z-index: 2;
+    position: relative;
+}
+
+.ms-point.reached .ms-dot-10k {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    border-color: #a855f7;
+    box-shadow: 0 0 20px rgba(168,85,247,0.6);
+}
+
+.ms-point.reached .ms-dot-50k {
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+    border-color: #4ade80;
+    box-shadow: 0 0 20px rgba(74,222,128,0.6);
+}
+
+.ms-point-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    margin-top: 6px;
+    white-space: nowrap;
+}
+
+.ms-point-label strong {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.ms-point-label span {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+}
+
+.ms-point-50k .ms-point-label { transform: translateX(-30%); }
+.ms-point-10k .ms-point-label { transform: translateX(15%); }
+
+/* Track gradient: only purple → green now (no orange phase) */
+.ms-track-fill {
+    background: linear-gradient(90deg, #a855f7, #4ade80);
+}
+
+@media (max-width: 600px) {
+    .ms-point-label span { display: none; }
+    .ms-point-50k .ms-point-label,
+    .ms-point-10k .ms-point-label { transform: none; }
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.progress-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.progress-count {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #a78bfa;
+}
+
+.progress-track {
+    position: relative;
+    height: 8px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 100px;
+    margin-bottom: 12px;
+    overflow: visible;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+    border-radius: 100px;
+    transition: width 1s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: 0 0 12px rgba(168,85,247,0.6);
+    min-width: 8px;
+}
+
+.progress-milestone {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.milestone-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.progress-milestone span {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+    white-space: nowrap;
+    margin-top: 8px;
+}
+
+.progress-footer {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.35);
+}
+
+#progressPct { color: #a78bfa; font-weight: 600; }
+
+/* ── Wallet Section ── */
+.wallet-section {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.wallet-locked-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: rgba(10,10,15,0.75);
+    backdrop-filter: blur(4px);
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.lock-icon { font-size: 2.5rem; }
+
+.wallet-locked-overlay p {
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.wallet-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    padding: 40px;
+}
+
+.wallet-blurred { filter: blur(2px); pointer-events: none; user-select: none; }
+
+.wallet-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.wallet-desc {
+    color: rgba(255,255,255,0.45);
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.wallet-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.wallet-btn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: not-allowed;
+    transition: all 0.2s;
+    width: 100%;
+    text-align: left;
+}
+
+.wallet-btn img {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+}
+
+.wallet-btn-arrow {
+    margin-left: auto;
+    color: rgba(255,255,255,0.25);
+}
+
+.wallet-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: rgba(255,255,255,0.2);
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.wallet-divider::before,
+.wallet-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+}
+
+.wallet-manual {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.wallet-input {
+    flex: 1;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    color: rgba(255,255,255,0.3);
+    font-size: 0.85rem;
+    font-family: 'SF Mono', 'Menlo', monospace;
+    cursor: not-allowed;
+}
+
+.wallet-input::placeholder { color: rgba(255,255,255,0.2); }
+
+.wallet-note {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.25);
+    line-height: 1.6;
+}
+
+/* ── Prepare Steps ── */
+.prepare-section {
+    padding: 48px 0 0;
+}
+
+.prepare-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.prepare-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.prepare-step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+}
+
+.prepare-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 0 16px rgba(124,58,237,0.4);
+}
+
+.prepare-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.prepare-content strong { color: #fff; font-size: 0.95rem; }
+.prepare-content span  { color: rgba(255,255,255,0.4); font-size: 0.82rem; }
+
+.prepare-link {
+    color: #a78bfa;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.prepare-link:hover { color: #c4b5fd; }
+
+/* Override footer for dark page */
+.claim-page .footer {
+    background: #0a0a0f;
+    border-top-color: rgba(255,255,255,0.06);
+}
+
+.claim-page .footer-copy { color: rgba(255,255,255,0.25); }
+
+/* ── gradient-text (reuse from main) ── */
+.gradient-text {
+    background: linear-gradient(135deg, #7c3aed, #a855f7, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media (max-width: 600px) {
+    .wallet-manual { flex-direction: column; }
+    .progress-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .wallet-card { padding: 24px; }
+}

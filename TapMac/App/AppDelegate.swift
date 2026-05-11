@@ -22,6 +22,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("🚀 MacBon 正在启动...")
 
+        // ── 单实例保护：检测是否已有另一个 MacBon 进程在运行 ──
+        let bundleID = Bundle.main.bundleIdentifier ?? "tech.macbon.app"
+        let running = NSRunningApplication.runningApplications(withBundleIdentifier: bundleID)
+        if running.count > 1 {
+            // 已有实例在运行，激活旧实例并退出自身
+            running.first(where: { $0.processIdentifier != ProcessInfo.processInfo.processIdentifier })?
+                   .activate(options: .activateIgnoringOtherApps)
+            NSApp.terminate(nil)
+            return
+        }
+
         // 同步开机自启状态
         settings.syncLaunchAtLoginStatus()
 
@@ -270,6 +281,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         settings.totalTapCount += event.tapCount
+        MiningTracker.shared.recordTap()
         updateMenuBarTitle()
 
         // 更新菜单中的计数显示

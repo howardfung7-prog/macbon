@@ -83,3 +83,42 @@
 "action.quickMemo.desc" = "彈出文字便箋，輸入後按 Return 儲存。";
 "msg.memo.failed" = "儲存備忘失敗";
 
+
+// MARK: - 挖礦
+"tab.mining" = "挖礦";
+"mining.headline" = "6小時 = AI時代的每日工作建議";
+"mining.subtitle" = "聰明工作，拍一拍，邊幹活邊賺 BON";
+"mining.completed" = "今日已完成 %d / 6 小時";
+"mining.maxedOut" = "今日已全部完成，明天繼續";
+"mining.deviceID" = "裝置標識";
+"mining.copy" = "複製";
+"mining.solLabel" = "Solana 錢包地址";
+"mining.solPlaceholder" = "輸入 Solana 錢包地址";
+"mining.save" = "儲存";
+"mining.saved" = "已綁定";
+"mining.alreadyBound" = "目前已綁定此地址";
+"mining.invalidAddress" = "請輸入有效的 Solana 地址（Base58，32–44位）";
+"mining.multiDevice" = "同一地址可綁定多台裝置";
+"mining.slotHour" = "第%d時";
+"mining.uploaded" = "已確認";
+"mining.uploading" = "上傳中…";
+"mining.uploadFailed" = "上傳失敗";
+"mining.airdropHint" = "空投窗口將在達到 50,000 台裝置後開啟";
+"mining.claim" = "Claim — macbon.tech";
+"mining.noAddress" = "綁定 Solana 地址後開始統計挖礦獎勵";
+"mining.hourCompleted" = "%@ 已完成 ✓";
+"mining.hourCurrent" = "%@ · 已拍 %d 次";
+"mining.maxedReset" = "今日6次已領完，明天 UTC 00:00 重置";
+"mining.nextHour" = "距下一小時 %@";
+"mining.utcReset" = "每日 UTC 00:00 重置";
+
+// Solana 地址確認 & 校驗
+"mining.confirmTitle" = "確認綁定 Solana 地址";
+"mining.confirmBind" = "確認綁定";
+"mining.confirmCancel" = "取消";
+"mining.confirmMessage" = "請仔細核對以下地址，綁定後無法修改：";
+"mining.confirmWarning" = "⚠️ 此操作不可撤銷，請確保地址正確";
+"mining.invalidChars" = "包含非法字元：";
+"mining.invalidLength" = "地址長度錯誤（目前 %d 位，應為 43-44 位）";
+"mining.modify" = "修改";
+"mining.modifyHint" = "修改後將消耗唯一一次機會，且空投開啟後永久鎖定";

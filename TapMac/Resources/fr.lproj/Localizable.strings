@@ -83,3 +83,42 @@
 "action.quickMemo.desc" = "Saisissez une note et appuyez sur Retour pour sauvegarder.";
 "msg.memo.failed" = "Échec de la sauvegarde du mémo";
 
+
+// MARK: - Minage
+"tab.mining" = "Minage";
+"mining.headline" = "6h = Temps de travail quotidien recommandé à l'ère de l'IA";
+"mining.subtitle" = "Travaillez malin, tapez et gagnez des BON";
+"mining.completed" = "Aujourd'hui: %d / 6 heures";
+"mining.maxedOut" = "Objectif du jour atteint — à demain";
+"mining.deviceID" = "ID de l'appareil";
+"mining.copy" = "Copier";
+"mining.solLabel" = "Adresse Solana";
+"mining.solPlaceholder" = "Entrez votre adresse Solana";
+"mining.save" = "Enregistrer";
+"mining.saved" = "Enregistré";
+"mining.alreadyBound" = "Cette adresse est déjà liée";
+"mining.invalidAddress" = "Entrez une adresse Solana valide (Base58, 32–44 car.)";
+"mining.multiDevice" = "Une adresse peut être liée à plusieurs appareils";
+"mining.slotHour" = "H. %d";
+"mining.uploaded" = "Confirmé";
+"mining.uploading" = "Envoi…";
+"mining.uploadFailed" = "Échec de l'envoi";
+"mining.airdropHint" = "L'airdrop débutera à 50 000 appareils";
+"mining.claim" = "Claim — macbon.tech";
+"mining.noAddress" = "Liez une adresse Solana pour commencer";
+"mining.hourCompleted" = "%@ terminé ✓";
+"mining.hourCurrent" = "%@ · %d taps";
+"mining.maxedReset" = "Limite atteinte — reset à UTC 00:00";
+"mining.nextHour" = "Prochaine heure dans %@";
+"mining.utcReset" = "Remise à zéro quotidienne à UTC 00:00";
+
+// Confirmation & validation de l'adresse Solana
+"mining.confirmTitle" = "Lier l'adresse Solana";
+"mining.confirmBind" = "Confirmer le lien";
+"mining.confirmCancel" = "Annuler";
+"mining.confirmMessage" = "Vérifiez attentivement l'adresse ci-dessous. Elle ne pourra plus être modifiée après liaison :";
+"mining.confirmWarning" = "⚠️ Cette action est irréversible. Assurez-vous que l'adresse est correcte.";
+"mining.invalidChars" = "Caractère invalide détecté :";
+"mining.invalidLength" = "Longueur invalide (%d caractères, 43–44 attendus)";
+"mining.modify" = "Modifier";
+"mining.modifyHint" = "C'est votre unique chance de modifier l'adresse. Elle sera définitivement verrouillée à l'ouverture de l'airdrop.";

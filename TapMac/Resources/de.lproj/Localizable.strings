@@ -83,3 +83,42 @@
 "action.quickMemo.desc" = "Notiz eingeben und mit Return speichern.";
 "msg.memo.failed" = "Notiz konnte nicht gespeichert werden";
 
+
+// MARK: - Mining
+"tab.mining" = "Mining";
+"mining.headline" = "6 Std. = Tägliche Arbeitsempfehlung im KI-Zeitalter";
+"mining.subtitle" = "Smart arbeiten, tippen und dabei BON verdienen";
+"mining.completed" = "Heute: %d / 6 Stunden";
+"mining.maxedOut" = "Tageslimit erreicht — bis morgen";
+"mining.deviceID" = "Geräte-ID";
+"mining.copy" = "Kopieren";
+"mining.solLabel" = "Solana-Wallet-Adresse";
+"mining.solPlaceholder" = "Solana-Wallet-Adresse eingeben";
+"mining.save" = "Speichern";
+"mining.saved" = "Gespeichert";
+"mining.alreadyBound" = "Diese Adresse ist bereits verknüpft";
+"mining.invalidAddress" = "Gültige Solana-Adresse eingeben (Base58, 32–44 Zeichen)";
+"mining.multiDevice" = "Eine Adresse kann mit mehreren Geräten verknüpft werden";
+"mining.slotHour" = "Std. %d";
+"mining.uploaded" = "Bestätigt";
+"mining.uploading" = "Hochladen…";
+"mining.uploadFailed" = "Upload fehlgeschlagen";
+"mining.airdropHint" = "Airdrop startet ab 50.000 Geräten";
+"mining.claim" = "Claim — macbon.tech";
+"mining.noAddress" = "Solana-Adresse verknüpfen, um Mining zu starten";
+"mining.hourCompleted" = "%@ abgeschlossen ✓";
+"mining.hourCurrent" = "%@ · %d Taps";
+"mining.maxedReset" = "Tageslimit erreicht — Reset um UTC 00:00";
+"mining.nextHour" = "Nächste Stunde in %@";
+"mining.utcReset" = "Täglicher Reset um UTC 00:00";
+
+// Solana-Adresse Bestätigung & Validierung
+"mining.confirmTitle" = "Solana-Adresse binden";
+"mining.confirmBind" = "Bindung bestätigen";
+"mining.confirmCancel" = "Abbrechen";
+"mining.confirmMessage" = "Bitte überprüfe die folgende Adresse sorgfältig. Nach der Bindung kann sie nicht mehr geändert werden:";
+"mining.confirmWarning" = "⚠️ Diese Aktion ist unwiderruflich. Stelle sicher, dass die Adresse korrekt ist.";
+"mining.invalidChars" = "Ungültiges Zeichen gefunden:";
+"mining.invalidLength" = "Ungültige Adresslänge (%d Zeichen, erwartet 43–44)";
+"mining.modify" = "Ändern";
+"mining.modifyHint" = "Dies ist deine einmalige Chance, die Adresse zu ändern. Nach dem Airdrop wird sie dauerhaft gesperrt.";

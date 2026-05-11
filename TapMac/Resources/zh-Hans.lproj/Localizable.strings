@@ -83,3 +83,42 @@
 "action.quickMemo.desc" = "弹出文字便签，输入后按回车保存。";
 "msg.memo.failed" = "保存备忘失败";
 
+
+// MARK: - 挖矿
+"tab.mining" = "挖矿";
+"mining.headline" = "6小时 = AI时代的每日工作建议";
+"mining.subtitle" = "聪明工作，拍一拍，边干活边赚 BON";
+"mining.completed" = "今日已完成 %d / 6 小时";
+"mining.maxedOut" = "今日已全部完成，明天继续";
+"mining.deviceID" = "设备标识";
+"mining.copy" = "复制";
+"mining.solLabel" = "Solana 钱包地址";
+"mining.solPlaceholder" = "输入 Solana 钱包地址";
+"mining.save" = "保存";
+"mining.saved" = "已绑定";
+"mining.alreadyBound" = "当前已绑定此地址";
+"mining.invalidAddress" = "请输入有效的 Solana 地址（Base58，32–44位）";
+"mining.multiDevice" = "同一地址可绑定多台设备";
+"mining.slotHour" = "第%d时";
+"mining.uploaded" = "已确认";
+"mining.uploading" = "上传中…";
+"mining.uploadFailed" = "上传失败";
+"mining.airdropHint" = "空投窗口将在达到 50,000 台设备后开启";
+"mining.claim" = "Claim — macbon.tech";
+"mining.noAddress" = "绑定 Solana 地址后开始统计挖矿奖励";
+"mining.hourCompleted" = "%@ 已完成 ✓";
+"mining.hourCurrent" = "%@ · 已拍 %d 次";
+"mining.maxedReset" = "今日6次已领完，明天 UTC 00:00 重置";
+"mining.nextHour" = "距下一小时 %@";
+"mining.utcReset" = "每日 UTC 00:00 重置";
+
+// Solana 地址确认 & 校验
+"mining.confirmTitle" = "确认绑定 Solana 地址";
+"mining.confirmBind" = "确认绑定";
+"mining.confirmCancel" = "取消";
+"mining.confirmMessage" = "请仔细核对以下地址，绑定后无法修改：";
+"mining.confirmWarning" = "⚠️ 此操作不可撤销，请确保地址正确";
+"mining.invalidChars" = "包含非法字符：";
+"mining.invalidLength" = "地址长度错误（当前 %d 位，应为 43-44 位）";
+"mining.modify" = "修改";
+"mining.modifyHint" = "修改后将消耗唯一一次机会，且空投开启后永久锁定";

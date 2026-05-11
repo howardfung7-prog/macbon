@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BON Tokenomics — MacBon</title>
+    <meta name="description" content="BON token economics: 80% to miners, 0% VC, 8-year fair distribution with growth-locked reserves.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tokenomics.css">
+</head>
+<body class="tk-page">
+
+<!-- Nav -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <span class="nav-icon">
+                <span class="vibe-line left l1"></span>
+                <span class="vibe-line left l2"></span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                <span class="vibe-line right l1"></span>
+                <span class="vibe-line right l2"></span>
+            </span>
+            MacBon
+        </a>
+        <div class="nav-links">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#mining">BON Mining</a>
+            <a href="tokenomics.html" class="active">Tokenomics</a>
+            <a href="claim.html" class="btn btn-nav btn-nav-claim">Claim BON</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Live Stats Strip -->
+<div class="stats-strip" id="statsStrip">
+    <div class="stats-strip-inner">
+        <div class="stat-cell">
+            <span class="stat-icon">🌍</span>
+            <span class="stat-num" id="statActiveDevices">—</span>
+            <span class="stat-label">Active Macs</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-cell">
+            <span class="stat-icon">💰</span>
+            <span class="stat-num" id="statDistributed">—</span>
+            <span class="stat-label">BON Distributed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-cell">
+            <span class="stat-icon">🔒</span>
+            <span class="stat-num" id="statLocked">—</span>
+            <span class="stat-label">Locked Reserve</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-cell">
+            <span class="stat-icon">📊</span>
+            <span class="stat-num" id="statToday">—</span>
+            <span class="stat-label">Today's Pool</span>
+        </div>
+    </div>
+</div>
+
+<!-- Glow background -->
+<div class="tk-glow"></div>
+
+<!-- Hero -->
+<section class="tk-hero">
+    <div class="container">
+        <div class="tk-eyebrow">BON Tokenomics</div>
+        <h1>Pure proof-of-tap.<br><span class="gradient-text">No VC. No team gift.</span></h1>
+        <p class="tk-sub">2.1 billion BON. 80% goes to people who tap their Mac. The other 20% covers liquidity and a small dev allowance — fully transparent, fully on-chain.</p>
+
+        <div class="hw-requirement hw-requirement-compact">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 21.99C7.78997 22.03 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+            <span>Mining requires a <strong>MacBook with Apple Silicon (M1 / M2 / M3 / M4 / M5)</strong>. Intel MacBooks and desktop Macs are not supported.</span>
+        </div>
+
+        <!-- Hero stat strip -->
+        <div class="tk-hero-stats">
+            <div class="tk-hs">
+                <div class="tk-hs-num">2.1B</div>
+                <div class="tk-hs-label">Total Supply</div>
+            </div>
+            <div class="tk-hs">
+                <div class="tk-hs-num">80%</div>
+                <div class="tk-hs-label">Mining Rewards</div>
+            </div>
+            <div class="tk-hs">
+                <div class="tk-hs-num">0%</div>
+                <div class="tk-hs-label">VC / Pre-sale / Team</div>
+            </div>
+            <div class="tk-hs">
+                <div class="tk-hs-num">~8 yrs</div>
+                <div class="tk-hs-label">Distribution Window</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Allocation Section -->
+<section class="tk-section">
+    <div class="container">
+        <div class="tk-section-head">
+            <div class="tk-section-eyebrow">Distribution</div>
+            <h2>Where every BON goes.</h2>
+            <p>One pie chart. No footnotes hiding insider allocations.</p>
+        </div>
+
+        <div class="tk-alloc-grid">
+            <!-- Visual bar chart -->
+            <div class="tk-alloc-chart">
+                <div class="alloc-stack">
+                    <div class="alloc-seg seg-mining" style="flex: 80;">
+                        <span class="seg-pct">80%</span>
+                        <span class="seg-name">Mining</span>
+                    </div>
+                    <div class="alloc-seg seg-dex" style="flex: 15;">
+                        <span class="seg-pct">15%</span>
+                        <span class="seg-name">DEX</span>
+                    </div>
+                    <div class="alloc-seg seg-dev" style="flex: 5;">
+                        <span class="seg-pct">5%</span>
+                        <span class="seg-name">Dev</span>
+                    </div>
+                </div>
+                <div class="alloc-total">2,100,000,000 BON</div>
+            </div>
+
+            <!-- Detail rows -->
+            <div class="tk-alloc-detail">
+                <div class="alloc-row">
+                    <div class="alloc-dot dot-mining"></div>
+                    <div class="alloc-info">
+                        <div class="alloc-title">
+                            <strong>Mining Rewards</strong>
+                            <span class="alloc-amt">1,680,000,000 BON</span>
+                        </div>
+                        <p>Earned by tappers over ~8 years. Daily pool halves 30% every 6 months. See full schedule below.</p>
+                    </div>
+                    <div class="alloc-pct">80%</div>
+                </div>
+
+                <div class="alloc-row">
+                    <div class="alloc-dot dot-dex"></div>
+                    <div class="alloc-info">
+                        <div class="alloc-title">
+                            <strong>Liquidity Reserve</strong>
+                            <span class="alloc-amt">315,000,000 BON</span>
+                        </div>
+                        <p>Reserved for trading liquidity after TGE. Deployment venue and timing decided closer to launch — could be DEX, CEX, or a mix. Held in a public multi-sig until then.</p>
+                    </div>
+                    <div class="alloc-pct">15%</div>
+                </div>
+
+                <div class="alloc-row">
+                    <div class="alloc-dot dot-dev"></div>
+                    <div class="alloc-info">
+                        <div class="alloc-title">
+                            <strong>Developer</strong>
+                            <span class="alloc-amt">105,000,000 BON</span>
+                        </div>
+                        <p>10% unlocks every quarter (10 quarters = 2.5 years), no cliff. Funds servers, iOS port, and ongoing maintenance.</p>
+                    </div>
+                    <div class="alloc-pct">5%</div>
+                </div>
+
+                <div class="alloc-row alloc-row-zero">
+                    <div class="alloc-dot dot-zero"></div>
+                    <div class="alloc-info">
+                        <div class="alloc-title">
+                            <strong>VC / Pre-sale / Founder Allocation</strong>
+                            <span class="alloc-amt alloc-amt-zero">0 BON</span>
+                        </div>
+                        <p>None. No private rounds. No insider unlocks. No team multisig sitting on supply.</p>
+                    </div>
+                    <div class="alloc-pct alloc-pct-zero">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Halving Schedule -->
+<section class="tk-section tk-section-alt">
+    <div class="container">
+        <div class="tk-section-head">
+            <div class="tk-section-eyebrow">Emission</div>
+            <h2>Halving every 6 months.<br><span class="gradient-text">Be early.</span></h2>
+            <p>Each era cuts the daily reward pool by 30%. Year 1 alone distributes 51% of all mining rewards.</p>
+        </div>
+
+        <!-- Halving curve visualization -->
+        <div class="halving-card">
+            <div class="halving-bars">
+                <div class="hbar" style="--h: 100%"><span class="hbar-pct">30.0%</span><span class="hbar-era">Era 1</span></div>
+                <div class="hbar" style="--h: 70%"><span class="hbar-pct">21.0%</span><span class="hbar-era">Era 2</span></div>
+                <div class="hbar" style="--h: 49%"><span class="hbar-pct">14.7%</span><span class="hbar-era">Era 3</span></div>
+                <div class="hbar" style="--h: 34%"><span class="hbar-pct">10.3%</span><span class="hbar-era">Era 4</span></div>
+                <div class="hbar" style="--h: 24%"><span class="hbar-pct">7.2%</span><span class="hbar-era">Era 5</span></div>
+                <div class="hbar" style="--h: 17%"><span class="hbar-pct">5.0%</span><span class="hbar-era">Era 6</span></div>
+                <div class="hbar" style="--h: 12%"><span class="hbar-pct">3.5%</span><span class="hbar-era">Era 7</span></div>
+                <div class="hbar" style="--h: 8%"><span class="hbar-pct">2.5%</span><span class="hbar-era">Era 8</span></div>
+                <div class="hbar hbar-tail" style="--h: 6%"><span class="hbar-pct">5.7%</span><span class="hbar-era">Era 9-16</span></div>
+            </div>
+            <div class="halving-axis">
+                <span>Year 1</span>
+                <span>Year 2</span>
+                <span>Year 3</span>
+                <span>Year 4</span>
+                <span>Year 5+</span>
+            </div>
+        </div>
+
+        <!-- Schedule table -->
+        <div class="schedule-table">
+            <div class="sched-header">
+                <span>Era</span>
+                <span>Months</span>
+                <span class="sched-num">Weekday Pool</span>
+                <span class="sched-num">Weekend Pool</span>
+                <span class="sched-num">Era Total</span>
+                <span class="sched-num">Cumulative</span>
+            </div>
+            <div class="sched-row sched-row-hot">
+                <span><strong>1</strong></span>
+                <span>1 – 6</span>
+                <span class="sched-num">3,600,000</span>
+                <span class="sched-num">720,000</span>
+                <span class="sched-num">504M</span>
+                <span class="sched-num">30.0%</span>
+            </div>
+            <div class="sched-row sched-row-hot">
+                <span><strong>2</strong></span>
+                <span>7 – 12</span>
+                <span class="sched-num">2,520,000</span>
+                <span class="sched-num">504,000</span>
+                <span class="sched-num">352.8M</span>
+                <span class="sched-num"><strong>51.0%</strong></span>
+            </div>
+            <div class="sched-row">
+                <span><strong>3</strong></span>
+                <span>13 – 18</span>
+                <span class="sched-num">1,764,000</span>
+                <span class="sched-num">352,800</span>
+                <span class="sched-num">247.0M</span>
+                <span class="sched-num">65.7%</span>
+            </div>
+            <div class="sched-row">
+                <span><strong>4</strong></span>
+                <span>19 – 24</span>
+                <span class="sched-num">1,234,800</span>
+                <span class="sched-num">246,960</span>
+                <span class="sched-num">172.9M</span>
+                <span class="sched-num"><strong>76.0%</strong></span>
+            </div>
+            <div class="sched-row">
+                <span><strong>5</strong></span>
+                <span>25 – 30</span>
+                <span class="sched-num">864,360</span>
+                <span class="sched-num">172,872</span>
+                <span class="sched-num">121.0M</span>
+                <span class="sched-num">83.2%</span>
+            </div>
+            <div class="sched-row">
+                <span><strong>6</strong></span>
+                <span>31 – 36</span>
+                <span class="sched-num">605,052</span>
+                <span class="sched-num">121,010</span>
+                <span class="sched-num">84.7M</span>
+                <span class="sched-num"><strong>88.2%</strong></span>
+            </div>
+            <div class="sched-row sched-row-tail">
+                <span><strong>7-16</strong></span>
+                <span>37 – 96</span>
+                <span class="sched-num">↓ halving</span>
+                <span class="sched-num">↓ halving</span>
+                <span class="sched-num">~197M</span>
+                <span class="sched-num">99.7%</span>
+            </div>
+        </div>
+
+        <p class="schedule-note">All pools are global daily totals split equally among Macs that complete 6 hours of tap activity that UTC day. Weekend pools (Sat &amp; Sun UTC) are 80% smaller — rest is rest.</p>
+    </div>
+</section>
+
+<!-- Pre-Mining Reserve -->
+<section class="tk-section">
+    <div class="container">
+        <div class="tk-section-head">
+            <div class="tk-section-eyebrow">Growth Lock</div>
+            <h2>The first 50,000 Macs<br>get a <span class="gradient-text">retroactive bonus</span>.</h2>
+            <p>Network effect, enforced by the contract: until BON reaches 50K active Macs, part of every reward is held in a locked reserve. Hit the milestone and the reserve unlocks to early miners. Miss it within 180 days and the locked reserve is permanently burned — already-paid BON in your wallet is unaffected.</p>
+        </div>
+
+        <!-- Three phases visualization -->
+        <div class="phase-grid">
+            <div class="phase phase-1">
+                <div class="phase-tag">Phase 1</div>
+                <div class="phase-range">0 – 10,000 Macs</div>
+                <div class="phase-split">
+                    <div class="split-paid" style="flex: 50;">50% paid</div>
+                    <div class="split-locked" style="flex: 50;">50% locked</div>
+                </div>
+                <p>Bootstrap mode. Reward halved, half held in reserve.</p>
+            </div>
+            <div class="phase phase-2">
+                <div class="phase-tag">Phase 2</div>
+                <div class="phase-range">10,001 – 50,000 Macs</div>
+                <div class="phase-split">
+                    <div class="split-paid" style="flex: 70;">70% paid</div>
+                    <div class="split-locked" style="flex: 30;">30% locked</div>
+                </div>
+                <p>Momentum mode. Reserve growing, payout climbs.</p>
+            </div>
+            <div class="phase phase-3">
+                <div class="phase-tag">Phase 3 · TGE</div>
+                <div class="phase-range">50,001+ Macs 🎉</div>
+                <div class="phase-split">
+                    <div class="split-paid" style="flex: 100;">100% paid + reserve unlock + airdrop opens</div>
+                </div>
+                <p>Full payout, all locked reserves released to past miners pro-rata, BON ships to wallets.</p>
+            </div>
+        </div>
+
+        <!-- Outcome scenarios -->
+        <div class="scenarios">
+            <h3>Three possible outcomes</h3>
+            <div class="scenario-list">
+                <div class="scenario scenario-good">
+                    <div class="scenario-icon">🚀</div>
+                    <div class="scenario-body">
+                        <div class="scenario-title">Hit 50K in 60 days</div>
+                        <p>~120M BON locked during sprint, redistributed to early ~50K miners at TGE. Average retroactive bonus: <strong>~2,400 BON per Mac</strong>, on top of regular mining earnings.</p>
+                    </div>
+                </div>
+                <div class="scenario scenario-mid">
+                    <div class="scenario-icon">🐢</div>
+                    <div class="scenario-body">
+                        <div class="scenario-title">Hit 50K in 150 days</div>
+                        <p>Up to <strong>200M+ BON</strong> accumulated in reserve. Whoever stuck around through the slow phase gets a massive retroactive payout — could exceed regular mining income.</p>
+                    </div>
+                </div>
+                <div class="scenario scenario-bad">
+                    <div class="scenario-icon">🔥</div>
+                    <div class="scenario-body">
+                        <div class="scenario-title">Don't hit 50K in 180 days</div>
+                        <p>The locked Pre-Mining Reserve is permanently <strong>burned on-chain</strong> — destroyed and removed from total supply. <strong>Already-paid BON in user wallets stays safe</strong> (no claw-back). Strong incentive to invite friends — <em>your</em> locked share is at stake. The clock starts the day the app goes live.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Milestones Timeline -->
+<section class="tk-section tk-section-alt">
+    <div class="container">
+        <div class="tk-section-head">
+            <div class="tk-section-eyebrow">Milestones</div>
+            <h2>Two gates from launch to liquidity.</h2>
+            <p>180-day countdown. Hit 50K Macs or the locked Pre-Mining Reserve gets burned (already-paid BON is untouched).</p>
+        </div>
+
+        <div class="milestone-timeline">
+            <div class="ms-item">
+                <div class="ms-circle ms-1">10K</div>
+                <div class="ms-text">
+                    <strong>10,000 Macs</strong>
+                    <span>Lock ratio drops 50% → 30%. Reserve still accumulating.</span>
+                </div>
+            </div>
+            <div class="ms-line"></div>
+            <div class="ms-item">
+                <div class="ms-circle ms-2">50K</div>
+                <div class="ms-text">
+                    <strong>50,000 Macs · TGE Day 🚀</strong>
+                    <span>Full payout, all locked reserves released to early miners, airdrop opens, liquidity reserve activated. All in one event.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="countdown-banner">
+            <div class="cd-icon">⏰</div>
+            <div class="cd-text">
+                <strong>180-day countdown from app launch</strong>
+                <span>If 50K Macs isn't reached in time, the <strong>locked Pre-Mining Reserve is permanently burned</strong> — destroyed on-chain, removed from total supply. The portion already paid to your wallet (the 50% / 70%) stays safe.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Global Distribution -->
+<section class="tk-section">
+    <div class="container">
+        <div class="tk-section-head">
+            <div class="tk-section-eyebrow">Global Distribution</div>
+            <h2>BON is mined<br>by <span class="gradient-text">real Macs worldwide</span>.</h2>
+            <p>Updated every 30 seconds. Each Mac is geolocated by IP at registration — privacy-respecting, country-level only.</p>
+        </div>
+
+        <div class="geo-card">
+            <div class="geo-summary">
+                <div class="geo-stat">
+                    <span class="geo-num" id="geoCountriesCount">—</span>
+                    <span class="geo-label">Countries</span>
+                </div>
+                <div class="geo-stat">
+                    <span class="geo-num" id="geoTopFlag">🌍</span>
+                    <span class="geo-label">Top Country</span>
+                </div>
+                <div class="geo-stat">
+                    <span class="geo-num" id="geoTopPct">—</span>
+                    <span class="geo-label">Top Share</span>
+                </div>
+            </div>
+
+            <div class="geo-leaderboard" id="geoLeaderboard">
+                <!-- Filled by stats.js -->
+                <div class="geo-empty">Waiting for the first miners to come online…</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Developer vesting -->
+<section class="tk-section">
+    <div class="container">
+        <div class="tk-section-head">
+            <div class="tk-section-eyebrow">Developer Allowance</div>
+            <h2>5%. Quarterly. <span class="gradient-text">No cliff.</span></h2>
+            <p>105M BON unlocks 10% per quarter from TGE day. Every release is on-chain and visible. If the project stalls, the unlock stalls with it.</p>
+        </div>
+
+        <div class="vesting-card">
+            <div class="vesting-bar">
+                <div class="vbar-fill"></div>
+                <div class="vbar-marks">
+                    <span>TGE</span><span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span><span>Q5</span><span>Q6</span><span>Q7</span><span>Q8</span><span>Q9</span><span>Q10</span>
+                </div>
+            </div>
+            <div class="vesting-stats">
+                <div class="vstat">
+                    <span class="vstat-num">10.5M</span>
+                    <span class="vstat-label">BON / quarter</span>
+                </div>
+                <div class="vstat">
+                    <span class="vstat-num">2.5 yrs</span>
+                    <span class="vstat-label">Total vesting</span>
+                </div>
+                <div class="vstat">
+                    <span class="vstat-num">0 day</span>
+                    <span class="vstat-label">Cliff (zero)</span>
+                </div>
+                <div class="vstat">
+                    <span class="vstat-num">multi-sig</span>
+                    <span class="vstat-label">Smart contract</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="tk-section tk-section-alt">
+    <div class="container container-narrow">
+        <div class="tk-section-head">
+            <div class="tk-section-eyebrow">FAQ</div>
+            <h2>Common questions.</h2>
+        </div>
+
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Why no team or VC allocation?</summary>
+                <p>Because BON should belong to the people who actually use MacBon. The 5% developer pool covers ongoing engineering, infrastructure, and compliance — that's it. No one is sitting on a 20% bag waiting to dump.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What counts as a "qualifying Mac" for daily rewards?</summary>
+                <p>A Mac that produces tap activity in at least 6 distinct UTC hours during the same UTC day. The 6 hours don't have to be consecutive. The server validates each hour against an anti-cheat threshold (max 10,000 taps per hour to prevent injection).</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Why are weekends paid 80% less?</summary>
+                <p>Two reasons. First, BON is meant to reward focused weekday work — the same rhythm the rest of your life follows. Second, an 80% weekend cut prevents 24/7 farm rigs from extracting disproportionate rewards. Rest is rest.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What if I'm in a timezone where weekend isn't Sat/Sun?</summary>
+                <p>The contract uses UTC weekend (Saturday and Sunday UTC) as a single global rule. We chose UTC to keep the math identical for everyone — any local definition would create timezone arbitrage. If your work week is Sun–Thu, you'll see your earnings shift by one day.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How does the Pre-Mining Reserve actually pay out?</summary>
+                <p>Every locked BON is recorded against your <code>device_id</code> daily. When the network hits 50,000 Macs, the smart contract triggers a one-time event at TGE: every record's <code>locked_amount</code> is added to the corresponding device's claimable balance — and immediately distributed alongside your regular mining earnings. You don't need to do anything.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What happens if 50K Macs is never reached?</summary>
+                <p>If the network doesn't hit 50,000 active Macs within 180 days of app launch, all locked reserves are permanently burned from the supply and the project is considered failed. Already-paid BON remains valid in user balances (no claw-back). The 15% liquidity reserve stays under the public multi-sig and would not be deployed.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Why merge the reserve unlock and TGE into one event?</summary>
+                <p>Simplicity and storytelling. One target — 50K Macs — is easier to rally a community around than two staggered milestones. It also means early miners' retroactive bonus lands the same day BON becomes tradable, maximising both the symbolic and financial impact.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I bind the same Solana address to multiple Macs?</summary>
+                <p>Yes — up to 10 Macs per Solana address. Each Mac mines independently. At airdrop time the contract sums all 10 device balances and sends one transfer to your wallet.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Is there inflation after Year 8?</summary>
+                <p>None. Total supply is hard-capped at 2.1B (or less, if reserves get burned). After Year 8 mining tails off; new BON only circulates from existing holders trading.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can the rules change after launch?</summary>
+                <p>The token contract itself is immutable. Mining parameters (daily pool size, halving cadence) are encoded in the server. After Year 1 we plan to migrate parameter control to a community-voted DAO using BON-weighted governance.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="tk-section tk-final">
+    <div class="container">
+        <div class="tk-final-card">
+            <h2>Ready to start mining?</h2>
+            <p>Download MacBon, bind your Solana wallet, and start tapping. Every hour you mine in Year 1 is worth more than every hour you'll mine later.</p>
+            <div class="tk-final-actions">
+                <a href="index.html#download" class="btn btn-primary btn-lg">Download MacBon</a>
+                <a href="claim.html" class="btn btn-ghost btn-lg">View Airdrop Status →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="nav-icon small">
+                    <span class="vibe-line left l1"></span>
+                    <span class="vibe-line left l2"></span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                    <span class="vibe-line right l1"></span>
+                    <span class="vibe-line right l2"></span>
+                </span>
+                MacBon
+            </div>
+            <p class="footer-copy">Mine smart. Claim when ready. Tap responsibly.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="stats.js"></script>
+</body>
+</html>

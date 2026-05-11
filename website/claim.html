@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim BON — MacBon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="claim.css">
+</head>
+<body class="claim-page">
+
+<!-- Nav -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <span class="nav-icon">
+                <span class="vibe-line left l1"></span>
+                <span class="vibe-line left l2"></span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                <span class="vibe-line right l1"></span>
+                <span class="vibe-line right l2"></span>
+            </span>
+            MacBon
+        </a>
+        <div class="nav-links">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#mining">BON Mining</a>
+            <a href="tokenomics.html">Tokenomics</a>
+            <a href="index.html#download">Download</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Live Stats Strip -->
+<div class="stats-strip" id="statsStrip">
+    <div class="stats-strip-inner">
+        <div class="stat-cell">
+            <span class="stat-icon">🌍</span>
+            <span class="stat-num" id="statActiveDevices">—</span>
+            <span class="stat-label">Active Macs</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-cell">
+            <span class="stat-icon">💰</span>
+            <span class="stat-num" id="statDistributed">—</span>
+            <span class="stat-label">BON Distributed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-cell">
+            <span class="stat-icon">🔒</span>
+            <span class="stat-num" id="statLocked">—</span>
+            <span class="stat-label">Locked Reserve</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-cell">
+            <span class="stat-icon">📊</span>
+            <span class="stat-num" id="statToday">—</span>
+            <span class="stat-label">Today's Pool</span>
+        </div>
+    </div>
+</div>
+
+<!-- Claim Hero -->
+<section class="claim-hero">
+    <div class="claim-glow"></div>
+    <div class="container">
+
+        <div class="claim-header">
+            <div class="claim-token-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h1>Claim Your <span class="gradient-text">BON</span></h1>
+            <p class="claim-sub">Connect your Solana wallet to receive your mined BON tokens when the airdrop opens.</p>
+        </div>
+
+        <!-- Coming Soon Banner -->
+        <div class="coming-soon-banner">
+            <div class="cs-icon">🔒</div>
+            <div class="cs-text">
+                <strong>Airdrop Not Open Yet</strong>
+                <span>BON unlocks in three stages. <a href="tokenomics.html">Read the full tokenomics →</a></span>
+            </div>
+        </div>
+
+        <!-- Three-milestone progress -->
+        <div class="airdrop-progress-card">
+            <div class="progress-header">
+                <span class="progress-title">Network Growth</span>
+                <span class="progress-count"><span id="deviceCount">—</span> active Macs</span>
+            </div>
+
+            <div class="ms-track">
+                <div class="ms-track-bg"></div>
+                <div class="ms-track-fill" id="msTrackFill" style="width: 0%"></div>
+
+                <div class="ms-point ms-point-10k" data-pct="20">
+                    <div class="ms-point-dot ms-dot-10k"></div>
+                    <div class="ms-point-label">
+                        <strong>10K</strong>
+                        <span>70% payout</span>
+                    </div>
+                </div>
+                <div class="ms-point ms-point-50k" data-pct="100">
+                    <div class="ms-point-dot ms-dot-50k"></div>
+                    <div class="ms-point-label">
+                        <strong>50K · TGE</strong>
+                        <span>Reserve unlock + airdrop</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-footer">
+                <span id="phaseLabel">Phase 1 · Bootstrap (50% paid, 50% locked)</span>
+            </div>
+        </div>
+
+        <!-- Wallet Connect UI (locked) -->
+        <div class="wallet-section">
+            <div class="wallet-locked-overlay">
+                <div class="lock-icon">🔐</div>
+                <p>Wallet connection will be enabled<br>when airdrop opens</p>
+            </div>
+
+            <div class="wallet-card wallet-blurred">
+                <h3>Connect Wallet</h3>
+                <p class="wallet-desc">Connect your Solana wallet to verify your BON balance and receive your airdrop.</p>
+
+                <div class="wallet-buttons">
+                    <button class="wallet-btn" disabled>
+                        <img src="https://phantom.app/favicon.ico" width="24" height="24" alt="Phantom" onerror="this.style.display='none'">
+                        <span>Phantom</span>
+                        <span class="wallet-btn-arrow">→</span>
+                    </button>
+                    <button class="wallet-btn" disabled>
+                        <img src="https://solflare.com/favicon.ico" width="24" height="24" alt="Solflare" onerror="this.style.display='none'">
+                        <span>Solflare</span>
+                        <span class="wallet-btn-arrow">→</span>
+                    </button>
+                    <button class="wallet-btn" disabled>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#7c3aed"/><path d="M12 4l8 14H4L12 4z" fill="white" opacity="0.9"/></svg>
+                        <span>Backpack</span>
+                        <span class="wallet-btn-arrow">→</span>
+                    </button>
+                </div>
+
+                <div class="wallet-divider">
+                    <span>or enter address manually</span>
+                </div>
+
+                <div class="wallet-manual">
+                    <input type="text" placeholder="Solana wallet address (43–44 chars)" disabled class="wallet-input"/>
+                    <button class="btn btn-primary" disabled>Check Balance</button>
+                </div>
+
+                <p class="wallet-note">
+                    🔒 Your wallet is only used to receive BON. We never request signing or spending permissions.
+                </p>
+            </div>
+        </div>
+
+        <!-- How to prepare -->
+        <div class="prepare-section">
+            <h3>Prepare now. Claim when it opens.</h3>
+            <div class="prepare-steps">
+                <div class="prepare-step">
+                    <div class="prepare-num">1</div>
+                    <div class="prepare-content">
+                        <strong>Download MacBon</strong>
+                        <span>Apple Silicon MacBook only (M1 / M2 / M3 / M4 / M5) · Intel &amp; desktop Macs not supported</span>
+                    </div>
+                    <a href="index.html#download" class="prepare-link">Download →</a>
+                </div>
+                <div class="prepare-step">
+                    <div class="prepare-num">2</div>
+                    <div class="prepare-content">
+                        <strong>Bind your Solana wallet</strong>
+                        <span>Open MacBon → Mining tab → Enter Solana address</span>
+                    </div>
+                </div>
+                <div class="prepare-step">
+                    <div class="prepare-num">3</div>
+                    <div class="prepare-content">
+                        <strong>Tap daily — 6 hours</strong>
+                        <span>Each hour slot earns BON from the daily pool</span>
+                    </div>
+                </div>
+                <div class="prepare-step">
+                    <div class="prepare-num">4</div>
+                    <div class="prepare-content">
+                        <strong>Come back here to claim</strong>
+                        <span>When 50,000 Macs are online, airdrop opens automatically</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="nav-icon small">
+                    <span class="vibe-line left l1"></span>
+                    <span class="vibe-line left l2"></span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                    <span class="vibe-line right l1"></span>
+                    <span class="vibe-line right l2"></span>
+                </span>
+                MacBon
+            </div>
+            <p class="footer-copy">Mine smart. Claim when ready. Tap responsibly.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Milestone progress bar — fed by stats.js (which polls /stats every 30s)
+const TGE_TARGET = 50000;
+const MS_10K = 10000;
+
+window.updateProgress = function(count) {
+    document.getElementById('deviceCount').textContent = count.toLocaleString();
+
+    // Fill width: 0–10K maps to 0–20%, 10K–50K maps to 20–100%
+    let pct;
+    if (count <= MS_10K)  pct = (count / MS_10K) * 20;
+    else                  pct = 20 + ((count - MS_10K) / (TGE_TARGET - MS_10K)) * 80;
+    pct = Math.min(pct, 100);
+    document.getElementById('msTrackFill').style.width = pct + '%';
+
+    // Activate milestone dots
+    document.querySelector('.ms-point-10k')?.classList.toggle('reached', count >= MS_10K);
+    document.querySelector('.ms-point-50k')?.classList.toggle('reached', count >= TGE_TARGET);
+
+    // Phase label
+    let phase;
+    if (count < MS_10K)         phase = `Phase 1 · Bootstrap (50% paid, 50% locked) — ${(MS_10K - count).toLocaleString()} Macs to next stage`;
+    else if (count < TGE_TARGET) phase = `Phase 2 · Momentum (70% paid, 30% locked) — ${(TGE_TARGET - count).toLocaleString()} Macs to TGE`;
+    else                        phase = `🚀 TGE reached — reserve unlocked, airdrop in progress`;
+    document.getElementById('phaseLabel').textContent = phase;
+};
+
+// Initial state until first /stats response arrives
+window.updateProgress(0);
+</script>
+<script src="stats.js"></script>
+</body>
+</html>

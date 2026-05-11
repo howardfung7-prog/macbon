@@ -83,3 +83,42 @@
 "action.quickMemo.desc" = "テキストメモを入力してReturnで保存。";
 "msg.memo.failed" = "メモの保存に失敗しました";
 
+
+// MARK: - マイニング
+"tab.mining" = "マイニング";
+"mining.headline" = "6時間 = AI時代の毎日の推奨労働時間";
+"mining.subtitle" = "スマートに働いて、タップして BON を稼ごう";
+"mining.completed" = "本日完了: %d / 6 時間";
+"mining.maxedOut" = "本日分完了 — また明日";
+"mining.deviceID" = "デバイスID";
+"mining.copy" = "コピー";
+"mining.solLabel" = "Solanaウォレットアドレス";
+"mining.solPlaceholder" = "Solanaウォレットアドレスを入力";
+"mining.save" = "保存";
+"mining.saved" = "登録済み";
+"mining.alreadyBound" = "このアドレスは登録済みです";
+"mining.invalidAddress" = "有効なSolanaアドレスを入力（Base58、32〜44文字）";
+"mining.multiDevice" = "同一アドレスに複数デバイスを登録できます";
+"mining.slotHour" = "第%d時";
+"mining.uploaded" = "確認済み";
+"mining.uploading" = "アップロード中…";
+"mining.uploadFailed" = "アップロード失敗";
+"mining.airdropHint" = "50,000台のデバイスに達するとエアドロップ開始";
+"mining.claim" = "Claim — macbon.tech";
+"mining.noAddress" = "Solanaアドレスを登録してマイニングを開始";
+"mining.hourCompleted" = "%@ 完了 ✓";
+"mining.hourCurrent" = "%@ · %d タップ";
+"mining.maxedReset" = "本日の上限達成 — UTC 00:00にリセット";
+"mining.nextHour" = "次の時間まで %@";
+"mining.utcReset" = "毎日UTC 00:00にリセット";
+
+// Solana アドレス確認 & 検証
+"mining.confirmTitle" = "Solanaアドレスをバインド";
+"mining.confirmBind" = "バインドを確定";
+"mining.confirmCancel" = "キャンセル";
+"mining.confirmMessage" = "以下のアドレスをご確認ください。バインド後は変更できません：";
+"mining.confirmWarning" = "⚠️ この操作は取り消せません。アドレスが正しいことを確認してください";
+"mining.invalidChars" = "無効な文字が含まれています：";
+"mining.invalidLength" = "アドレスの長さが無効です（現在 %d 文字、43〜44 文字が必要）";
+"mining.modify" = "変更";
+"mining.modifyHint" = "変更は1回のみ可能です。エアドロップ開始後は永久にロックされます。";
